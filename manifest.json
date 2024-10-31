@@ -1,0 +1,29 @@
+{
+    "manifest_version": 3,
+    "name": "FirstLedger Token Monitor",
+    "version": "1.0",
+    "description": "Monitors FirstLedger for new token listings",
+    "permissions": ["notifications", "tabs", "scripting", "storage"],
+    "host_permissions": [
+        "https://firstledger.net/*",
+        "https://api.telegram.org/*"
+    ],
+    "action": {
+        "default_icon": "icon.png",
+        "default_title": "FirstLedger Monitor"
+    },
+    "background": {
+        "service_worker": "background.js"
+    },
+    "web_accessible_resources": [
+        {
+            "resources": [
+                "level-up.wav",
+                "chord.wav",
+                "coin.wav",
+                "monitor.html"
+            ],
+            "matches": ["<all_urls>"]
+        }
+    ]
+}
